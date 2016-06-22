@@ -2,7 +2,8 @@ import os
 import shlex
 import subprocess
 
-class Shell (object):
+
+class Shell(object):
 
     def __init__(self, env):
         self.env = os.environ.copy()
@@ -39,3 +40,4 @@ def run(cmd, alias=None, silent=True, env=None):
 def batch(cmds):
     for cmd in cmds:
         run(cmd)
+
